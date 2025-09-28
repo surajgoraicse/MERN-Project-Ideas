@@ -1,27 +1,25 @@
 import {
 	Card,
-	CardAction,
 	CardContent,
 	CardDescription,
-	CardFooter,
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
+import { heroData } from "@/data/data";
+import { cn } from "@/lib/utils";
 
-const HeroCard = () => {
+const HeroCard = ({ className }: { className?: string }) => {
 	return (
-		<Card>
+		<Card className={cn(className)}>
 			<CardHeader>
-				<CardTitle>Card Title</CardTitle>
-				<CardDescription>Card Description</CardDescription>
-				<CardAction>Card Action</CardAction>
+				<CardTitle className="text-4xl">{heroData.title}</CardTitle>
+				<CardDescription>{heroData.description}</CardDescription>
 			</CardHeader>
 			<CardContent>
-				<p>Card Content</p>
+				<p className="leading-7 text-gray-700 dark:text-gray-200 [&:not(:first-child)]:mt-6">
+					{heroData.longDescription}
+				</p>
 			</CardContent>
-			<CardFooter>
-				<p>Card Footer</p>
-			</CardFooter>
 		</Card>
 	);
 };
