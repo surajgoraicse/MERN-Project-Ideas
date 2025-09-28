@@ -14,13 +14,13 @@ const ProjectCard = ({ projectItem }: { projectItem: ProjectItem }) => {
 			{projectItem ? (
 				<Card>
 					<CardHeader>
-						<CardTitle>{projectItem.title}</CardTitle>
+						<CardTitle>{ projectItem.tag.id + ". " + projectItem.title}</CardTitle>
 						<CardDescription>
 							{projectItem.longTitle}
 						</CardDescription>
 						<CardAction>
 							<Badge variant={"secondary"} asChild>
-								<p>{projectItem.tag}</p>
+								<p>{projectItem.tag.level}</p>
 							</Badge>
 						</CardAction>
 					</CardHeader>
@@ -35,9 +35,10 @@ const ProjectCard = ({ projectItem }: { projectItem: ProjectItem }) => {
 										<Badge
 											variant={"outline"}
 											key={item}
+											className="mr-1"
 											asChild
 										>
-											<p>item</p>
+											<p>{item}</p>
 										</Badge>
 									);
 								})}

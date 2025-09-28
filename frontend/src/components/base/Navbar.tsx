@@ -15,18 +15,18 @@ export default function Navbar(): JSX.Element {
 							className="inline-flex items-center gap-2"
 						>
 							<span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-pink-500 text-white font-semibold">
-								A
+								😉
 							</span>
 							<span className="font-medium text-gray-900 dark:text-gray-100">
-								Acme
+								FullStackfolio
 							</span>
 						</Link>
 						<span className=" text-sm text-gray-500 dark:text-gray-400">
-							minimal UI · modern
+							Learn  · Build · Explore
 						</span>
 					</div>
 
-					<div className=" flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 p-2 rounded-full  ">
+					<div className=" flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 p-2 rounded-full border ">
 						<AnimatedThemeToggler className="" />
 					</div>
 				</div>
