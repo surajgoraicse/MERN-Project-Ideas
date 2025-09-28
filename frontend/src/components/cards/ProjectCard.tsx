@@ -32,7 +32,11 @@ const ProjectCard = ({ projectItem }: { projectItem: ProjectItem }) => {
 							{projectItem.techs &&
 								projectItem.techs.map((item) => {
 									return (
-										<Badge variant={"outline"} asChild>
+										<Badge
+											variant={"outline"}
+											key={item}
+											asChild
+										>
 											<p>item</p>
 										</Badge>
 									);
