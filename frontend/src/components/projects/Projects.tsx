@@ -35,9 +35,10 @@ const Projects = ({ className }: { className: string }) => {
 		}
 	}, [level, loading]);
 
-	const filteredProjects = projectsList.filter(
-		(project) => level === "All" || project.tag.level === level
-	);
+	// filter and keep in sorted order
+	const filteredProjects = projectsList
+		.filter((project) => level === "All" || project.tag.level === level)
+		.sort((a, b) => a.tag.id - b.tag.id);
 
 	if (!loading) {
 		// Shimmer while waiting for hydration
@@ -51,7 +52,10 @@ const Projects = ({ className }: { className: string }) => {
 				</div>
 				<div className="flex flex-col gap-2 mt-5">
 					{[1, 2, 3].map((i) => (
-						<div key={i} className="h-20 rounded-2xl bg-muted dark:bg-muted/40" />
+						<div
+							key={i}
+							className="h-20 rounded-2xl bg-muted dark:bg-muted/40"
+						/>
 					))}
 				</div>
 			</div>

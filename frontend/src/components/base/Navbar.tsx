@@ -5,7 +5,7 @@ import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
 
 export default function Navbar(): JSX.Element {
 	return (
-		<header className="w-full bg-white/60 dark:bg-gray-900/60 backdrop-blur sticky top-0 z-40 border-b border-gray-200 dark:border-gray-800 ">
+		<header className="w-full bg-white/60 dark:bg-background/80 backdrop-blur sticky top-0 z-40 border-b border-gray-200 dark:border-gray-800 ">
 			<div className="mx-auto max-w-3xl px-4 sm:px-12 lg:px-10">
 				<div className="flex h-16 items-center justify-between">
 					{/* Brand */}
@@ -22,7 +22,7 @@ export default function Navbar(): JSX.Element {
 							</span>
 						</Link>
 						<span className=" text-sm text-gray-500 dark:text-gray-400">
-							Learn  · Build · Explore
+							Learn · Build · Explore
 						</span>
 					</div>
 

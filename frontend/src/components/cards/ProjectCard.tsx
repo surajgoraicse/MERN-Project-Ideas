@@ -12,9 +12,11 @@ const ProjectCard = ({ projectItem }: { projectItem: ProjectItem }) => {
 	return (
 		<>
 			{projectItem ? (
-				<Card>
+				<Card className="">
 					<CardHeader>
-						<CardTitle>{ projectItem.tag.id + ". " + projectItem.title}</CardTitle>
+						<CardTitle>
+							{projectItem.tag.id + ". " + projectItem.title}
+						</CardTitle>
 						<CardDescription>
 							{projectItem.longTitle}
 						</CardDescription>
@@ -25,7 +27,7 @@ const ProjectCard = ({ projectItem }: { projectItem: ProjectItem }) => {
 						</CardAction>
 					</CardHeader>
 					<CardContent>
-						<p className="text-sm text-gray-800">
+						<p className="text-sm text-gray-800 dark:text-gray-50">
 							{projectItem.description}
 						</p>
 						<CardAction className="mt-2">
