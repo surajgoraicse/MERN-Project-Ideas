@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 MERN Project Ideas Explorer
 
-## Getting Started
+A simple and interactive frontend app that provides a curated list of project ideas to help you dive into building **real-world applications** using the **MERN stack (MongoDB, Express.js, React, Node.js)**.  
+Each project is broken down into **manageable sub-problems**, making your learning journey smoother and more enjoyable.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 📚 Collection of project ideas focused on MERN stack learning.
+- 🔎 Filter and search functionality to quickly find projects.
+- 🧩 Projects broken down into smaller sub-tasks for better clarity.
+- 🎨 Modern UI with **Next.js**, **ShadCN**, and **Tailwind CSS**.
+
+## 📂 Project Data Structure
+
+All project ideas are stored in a single **TypeScript file**.  
+This makes it easy to add, edit, or extend the list without touching the UI.
+
+### Types
+
+`./MERN-Project-Ideas/frontend/src/data.ts`
+
+```ts
+type Tech =
+  | "REACT"
+  | "MONGODB"
+  | "NODE.JS"
+  | "EXPRESS"
+  | "SOCKET"
+  | "GRAPHQL"
+  | "GRPC"
+  | "POSTGRES";
+
+export type Tags = {
+  level: "Begineer" | "Intermediate" | "Advanced";
+  id: number;
+};
+
+export type ProjectItem = {
+  title: string;
+  longTitle: string;
+  description: string;
+  tag: Tags;
+  techs?: Tech[];
+};
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Example
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```ts
+{
+  title: "Chat App",
+  longTitle: "Real-time Chat Application with WebSocket",
+  description: "Build a chat app where users can join rooms, send messages, and see typing indicators.",
+  tag: { level: "Intermediate", id: 2 },
+  techs: ["REACT", "NODE.JS", "SOCKET"]
+}
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Getting Started
 
-## Learn More
+### 1. Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+Make sure you have installed:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Node.js](https://nodejs.org/) (>= 18)
+- [pnpm](https://pnpm.io/) (>= 9) 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  - install pnpm using `npm i -g pnpm`
 
-## Deploy on Vercel
+### 2. Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Clone the repository and install dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+pnpm install
+
+pnpm dev
+```
